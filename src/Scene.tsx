@@ -5,7 +5,7 @@ import {AbsoluteFill, useVideoConfig, Video} from 'remotion';
 import {Phone} from './Phone';
 
 const container: React.CSSProperties = {
-	backgroundColor: 'white',
+	backgroundColor: 'lightgrey',
 };
 
 const videoStyle: React.CSSProperties = {
@@ -33,7 +33,7 @@ export const Scene: React.FC<{
 			<Video ref={videoRef} src={videoSrc} style={videoStyle} />
 			{videoData ? (
 				<ThreeCanvas linear width={width} height={height}>
-					<ambientLight intensity={1.5} color={0xffffff} />
+					<ambientLight intensity={1.5}/>
 					<pointLight position={[10, 10, 0]} />
 					<Phone
 						baseScale={baseScale}
